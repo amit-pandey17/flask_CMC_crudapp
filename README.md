@@ -1,6 +1,7 @@
 # Flask Application with SQLAlchemy
 
 This is a Flask web application that uses SQLAlchemy for database management. The application also includes features for pagination and error handling. The following instructions will help you set up and run this project on your local machine.
+Listens to port: http://127.0.0.1:5000
 
 ## Table of Contents
 
