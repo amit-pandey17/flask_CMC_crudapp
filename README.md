@@ -86,8 +86,8 @@ Visit [http://127.0.0.1:5000](http://127.0.0.1:5000) in your web browser to see 
 
 ## Authors
 
-- **Your Name** - *Initial work* - [Your GitHub](https://github.com/<USERNAME>)
+- **Amit Pandey**
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+TBD
