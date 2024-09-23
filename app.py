@@ -1,3 +1,5 @@
+from crypt import methods
+
 from flask import Flask, render_template, request, redirect, url_for, flash
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import Enum as SQLAEnum  # Avoid name conflict with Python's enum
@@ -57,6 +59,23 @@ def insert():
         flash("User inserted successfully!")
 
         return redirect(url_for('index', msg='Data Inserted'))
+
+@app.route('/update', methods=['GET','POST'])
+def update():
+
+    if request.method == 'POST':
+
+        my_data = Data.query.get(request.form.get('id'))
+        my_data.name = request.form['name']
+        my_data.email = request.form['email']
+        my_data.role = UserRole[request.form['role']]
+
+        db.session.commit()
+        flash("User updated successfully!")
+
+        return redirect(url_for('index'))
+
+
 
 
 if __name__ == '__main__':
