@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import Enum as SQLAEnum  # Avoid name conflict with Python's enum
+from sqlalchemy.testing.suite.test_reflection import users
 
 # DB credentials: un: root@localhost, pw:Password123
 
@@ -38,7 +39,8 @@ class Data(db.Model):
 
 @app.route('/')
 def index():  # put application's code here
-    return render_template('index.html')
+    all_data = Data.query.all()
+    return render_template('index.html', users = all_data)
 
 
 @app.route('/insert', methods=['POST'])
@@ -58,5 +60,5 @@ def insert():
 
 
 if __name__ == '__main__':
-    db.create_all()  # Create tables if they don't exist
+    db.create_all()  # Create tables if they don't exist (with each deployment)
     app.run(debug=True)  # change this later on for prod
