@@ -1,0 +1,85 @@
+2024-09-23 14:53:02,833 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-09-23 14:53:02,833 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-09-23 14:56:25,917 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-09-23 14:56:25,917 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-09-23 14:56:32,283 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-09-23 14:56:32,283 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-09-23 14:56:42,203 - werkzeug - INFO - 127.0.0.1 - - [23/Sep/2024 14:56:42] "GET / HTTP/1.1" 200 -
+2024-09-23 14:56:42,231 - werkzeug - INFO - 127.0.0.1 - - [23/Sep/2024 14:56:42] "[36mGET /static/js/bootstrap.js HTTP/1.1[0m" 304 -
+2024-09-23 14:56:42,231 - werkzeug - INFO - 127.0.0.1 - - [23/Sep/2024 14:56:42] "GET /static/css/bootstrap.css HTTP/1.1" 200 -
+2024-09-23 14:56:42,231 - werkzeug - INFO - 127.0.0.1 - - [23/Sep/2024 14:56:42] "GET /static/js/jquery-3.7.1.min.js HTTP/1.1" 200 -
+2024-09-23 14:56:42,243 - werkzeug - INFO - 127.0.0.1 - - [23/Sep/2024 14:56:42] "[36mGET /static/js/jquery-3.7.1.min.js HTTP/1.1[0m" 304 -
+2024-09-23 14:56:42,251 - werkzeug - INFO - 127.0.0.1 - - [23/Sep/2024 14:56:42] "[36mGET /static/js/bootstrap.js HTTP/1.1[0m" 304 -
+2024-09-23 14:56:46,912 - werkzeug - INFO - 127.0.0.1 - - [23/Sep/2024 14:56:46] "[32mPOST /update HTTP/1.1[0m" 302 -
+2024-09-23 14:56:46,920 - werkzeug - INFO - 127.0.0.1 - - [23/Sep/2024 14:56:46] "GET / HTTP/1.1" 200 -
+2024-09-23 14:56:46,950 - werkzeug - INFO - 127.0.0.1 - - [23/Sep/2024 14:56:46] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-09-23 14:56:46,951 - werkzeug - INFO - 127.0.0.1 - - [23/Sep/2024 14:56:46] "[36mGET /static/js/jquery-3.7.1.min.js HTTP/1.1[0m" 304 -
+2024-09-23 14:56:46,951 - werkzeug - INFO - 127.0.0.1 - - [23/Sep/2024 14:56:46] "[36mGET /static/js/bootstrap.js HTTP/1.1[0m" 304 -
+2024-09-23 14:56:46,964 - werkzeug - INFO - 127.0.0.1 - - [23/Sep/2024 14:56:46] "[36mGET /static/js/jquery-3.7.1.min.js HTTP/1.1[0m" 304 -
+2024-09-23 14:56:46,974 - werkzeug - INFO - 127.0.0.1 - - [23/Sep/2024 14:56:46] "[36mGET /static/js/bootstrap.js HTTP/1.1[0m" 304 -
+2024-09-23 14:57:27,708 - werkzeug - INFO - 127.0.0.1 - - [23/Sep/2024 14:57:27] "[32mPOST /insert HTTP/1.1[0m" 302 -
+2024-09-23 14:57:27,716 - werkzeug - INFO - 127.0.0.1 - - [23/Sep/2024 14:57:27] "GET / HTTP/1.1" 200 -
+2024-09-23 14:57:27,750 - werkzeug - INFO - 127.0.0.1 - - [23/Sep/2024 14:57:27] "[36mGET /static/js/bootstrap.js HTTP/1.1[0m" 304 -
+2024-09-23 14:57:27,750 - werkzeug - INFO - 127.0.0.1 - - [23/Sep/2024 14:57:27] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-09-23 14:57:27,751 - werkzeug - INFO - 127.0.0.1 - - [23/Sep/2024 14:57:27] "[36mGET /static/js/jquery-3.7.1.min.js HTTP/1.1[0m" 304 -
+2024-09-23 14:57:27,769 - werkzeug - INFO - 127.0.0.1 - - [23/Sep/2024 14:57:27] "[36mGET /static/js/jquery-3.7.1.min.js HTTP/1.1[0m" 304 -
+2024-09-23 14:57:27,780 - werkzeug - INFO - 127.0.0.1 - - [23/Sep/2024 14:57:27] "[36mGET /static/js/bootstrap.js HTTP/1.1[0m" 304 -
+2024-09-23 15:08:54,594 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-09-23 15:08:54,594 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-09-23 15:09:09,680 - werkzeug - INFO - 127.0.0.1 - - [23/Sep/2024 15:09:09] "GET / HTTP/1.1" 200 -
+2024-09-23 15:09:09,708 - werkzeug - INFO - 127.0.0.1 - - [23/Sep/2024 15:09:09] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-09-23 15:09:09,708 - werkzeug - INFO - 127.0.0.1 - - [23/Sep/2024 15:09:09] "[36mGET /static/js/bootstrap.js HTTP/1.1[0m" 304 -
+2024-09-23 15:09:09,708 - werkzeug - INFO - 127.0.0.1 - - [23/Sep/2024 15:09:09] "[36mGET /static/js/jquery-3.7.1.min.js HTTP/1.1[0m" 304 -
+2024-09-23 15:09:09,721 - werkzeug - INFO - 127.0.0.1 - - [23/Sep/2024 15:09:09] "[36mGET /static/js/jquery-3.7.1.min.js HTTP/1.1[0m" 304 -
+2024-09-23 15:09:09,736 - werkzeug - INFO - 127.0.0.1 - - [23/Sep/2024 15:09:09] "[36mGET /static/js/bootstrap.js HTTP/1.1[0m" 304 -
+2024-09-23 15:09:11,202 - werkzeug - INFO - 127.0.0.1 - - [23/Sep/2024 15:09:11] "GET / HTTP/1.1" 200 -
+2024-09-23 15:09:11,230 - werkzeug - INFO - 127.0.0.1 - - [23/Sep/2024 15:09:11] "[36mGET /static/js/jquery-3.7.1.min.js HTTP/1.1[0m" 304 -
+2024-09-23 15:09:11,231 - werkzeug - INFO - 127.0.0.1 - - [23/Sep/2024 15:09:11] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-09-23 15:09:11,232 - werkzeug - INFO - 127.0.0.1 - - [23/Sep/2024 15:09:11] "[36mGET /static/js/bootstrap.js HTTP/1.1[0m" 304 -
+2024-09-23 15:09:11,243 - werkzeug - INFO - 127.0.0.1 - - [23/Sep/2024 15:09:11] "[36mGET /static/js/jquery-3.7.1.min.js HTTP/1.1[0m" 304 -
+2024-09-23 15:09:11,249 - werkzeug - INFO - 127.0.0.1 - - [23/Sep/2024 15:09:11] "[36mGET /static/js/bootstrap.js HTTP/1.1[0m" 304 -
+2024-09-23 15:09:19,259 - app - INFO - Update successful: <Data 2>
+2024-09-23 15:09:19,260 - werkzeug - INFO - 127.0.0.1 - - [23/Sep/2024 15:09:19] "[32mPOST /update HTTP/1.1[0m" 302 -
+2024-09-23 15:09:19,266 - werkzeug - INFO - 127.0.0.1 - - [23/Sep/2024 15:09:19] "GET / HTTP/1.1" 200 -
+2024-09-23 15:09:19,289 - werkzeug - INFO - 127.0.0.1 - - [23/Sep/2024 15:09:19] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-09-23 15:09:19,289 - werkzeug - INFO - 127.0.0.1 - - [23/Sep/2024 15:09:19] "[36mGET /static/js/bootstrap.js HTTP/1.1[0m" 304 -
+2024-09-23 15:09:19,290 - werkzeug - INFO - 127.0.0.1 - - [23/Sep/2024 15:09:19] "[36mGET /static/js/jquery-3.7.1.min.js HTTP/1.1[0m" 304 -
+2024-09-23 15:09:19,308 - werkzeug - INFO - 127.0.0.1 - - [23/Sep/2024 15:09:19] "[36mGET /static/js/jquery-3.7.1.min.js HTTP/1.1[0m" 304 -
+2024-09-23 15:09:19,317 - werkzeug - INFO - 127.0.0.1 - - [23/Sep/2024 15:09:19] "[36mGET /static/js/bootstrap.js HTTP/1.1[0m" 304 -
+2024-09-23 15:10:24,364 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-09-23 15:10:24,365 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-09-23 15:11:01,525 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-09-23 15:11:01,525 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-09-23 15:12:54,888 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-09-23 15:12:54,888 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-09-23 15:13:15,070 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-09-23 15:13:15,070 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-09-23 15:15:11,024 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-09-23 15:15:11,024 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-09-23 15:25:14,903 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-09-23 15:25:14,903 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-09-23 15:25:16,898 - werkzeug - INFO - 127.0.0.1 - - [23/Sep/2024 15:25:16] "GET / HTTP/1.1" 200 -
+2024-09-23 15:25:16,919 - werkzeug - INFO - 127.0.0.1 - - [23/Sep/2024 15:25:16] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-09-23 15:25:16,920 - werkzeug - INFO - 127.0.0.1 - - [23/Sep/2024 15:25:16] "[36mGET /static/js/jquery-3.7.1.min.js HTTP/1.1[0m" 304 -
+2024-09-23 15:25:16,920 - werkzeug - INFO - 127.0.0.1 - - [23/Sep/2024 15:25:16] "[36mGET /static/js/bootstrap.js HTTP/1.1[0m" 304 -
+2024-09-23 15:25:16,931 - werkzeug - INFO - 127.0.0.1 - - [23/Sep/2024 15:25:16] "[36mGET /static/js/jquery-3.7.1.min.js HTTP/1.1[0m" 304 -
+2024-09-23 15:25:16,938 - werkzeug - INFO - 127.0.0.1 - - [23/Sep/2024 15:25:16] "[36mGET /static/js/bootstrap.js HTTP/1.1[0m" 304 -
+2024-09-23 15:25:16,942 - werkzeug - INFO - 127.0.0.1 - - [23/Sep/2024 15:25:16] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-09-23 15:25:20,493 - app - INFO - Update successful: <Data 2>
+2024-09-23 15:25:20,494 - werkzeug - INFO - 127.0.0.1 - - [23/Sep/2024 15:25:20] "[32mPOST /update HTTP/1.1[0m" 302 -
+2024-09-23 15:25:20,508 - werkzeug - INFO - 127.0.0.1 - - [23/Sep/2024 15:25:20] "GET / HTTP/1.1" 200 -
+2024-09-23 15:25:20,535 - werkzeug - INFO - 127.0.0.1 - - [23/Sep/2024 15:25:20] "[36mGET /static/css/bootstrap.css HTTP/1.1[0m" 304 -
+2024-09-23 15:25:20,536 - werkzeug - INFO - 127.0.0.1 - - [23/Sep/2024 15:25:20] "[36mGET /static/js/bootstrap.js HTTP/1.1[0m" 304 -
+2024-09-23 15:25:20,536 - werkzeug - INFO - 127.0.0.1 - - [23/Sep/2024 15:25:20] "[36mGET /static/js/jquery-3.7.1.min.js HTTP/1.1[0m" 304 -
+2024-09-23 15:25:20,549 - werkzeug - INFO - 127.0.0.1 - - [23/Sep/2024 15:25:20] "[36mGET /static/js/jquery-3.7.1.min.js HTTP/1.1[0m" 304 -
+2024-09-23 15:25:20,557 - werkzeug - INFO - 127.0.0.1 - - [23/Sep/2024 15:25:20] "[36mGET /static/js/bootstrap.js HTTP/1.1[0m" 304 -

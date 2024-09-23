@@ -1,4 +1,5 @@
 import logging
+from http.cookiejar import debug
 
 from flask import Flask, render_template, request, redirect, url_for, flash
 from flask_sqlalchemy import SQLAlchemy
@@ -8,9 +9,8 @@ import logging
 
 # DB credentials: un: root@localhost, pw:Password123
 
-logging.basicConfig(level=logging.ERROR)  # Adjust as necessary
+logging.basicConfig(filename='app.log', level=logging.DEBUG, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
-
 
 
 app = Flask(__name__)
@@ -39,7 +39,7 @@ class Data(db.Model):
     email = db.Column(db.String(100), nullable=False)
     role = db.Column(SQLAEnum(UserRole), nullable=False)  # Enum for role
 
-    def __init__(self, name, email, role):
+    def __init__(self, name, email, role, dob):
         self.name = name
         self.email = email
         self.role = role
