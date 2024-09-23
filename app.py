@@ -1,11 +1,17 @@
-from crypt import methods
+import logging
 
 from flask import Flask, render_template, request, redirect, url_for, flash
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import Enum as SQLAEnum  # Avoid name conflict with Python's enum
-from sqlalchemy.testing.suite.test_reflection import users
+from sqlalchemy.exc import SQLAlchemyError  # For catching SQLAlchemy errors
+import logging
 
 # DB credentials: un: root@localhost, pw:Password123
+
+logging.basicConfig(level=logging.ERROR)  # Adjust as necessary
+logger = logging.getLogger(__name__)
+
+
 
 app = Flask(__name__)
 app.secret_key = "Secret!"
@@ -42,40 +48,78 @@ class Data(db.Model):
 @app.route('/')
 def index():  # put application's code here
     all_data = Data.query.all()
-    return render_template('index.html', users = all_data)
+    return render_template('index.html', users=all_data)
 
 
 @app.route('/insert', methods=['POST'])
 def insert():
-    if request.method == 'POST':
-        name = request.form['name']
-        email = request.form['email']
-        role = UserRole[request.form['role']]  # Convert to UserRole enum
+    try:
+        if request.method == 'POST':
+            name = request.form['name']
+            email = request.form['email']
+            role = UserRole[request.form['role']]  # Convert to UserRole enum
+            my_data = Data(name, email, role)  # Data object
 
-        my_data = Data(name, email, role)  # Data object
-        db.session.add(my_data)
-        db.session.commit()
+            db.session.add(my_data)
+            db.session.commit()
 
-        flash("User inserted successfully!")
+            #logging - success
+            logger.info(f"insertion successful: {my_data}")
 
-        return redirect(url_for('index', msg='Data Inserted'))
+            flash("User inserted successfully!")
+            return redirect(url_for('index'))
 
-@app.route('/update', methods=['GET','POST'])
-def update():
-
-    if request.method == 'POST':
-
-        my_data = Data.query.get(request.form.get('id'))
-        my_data.name = request.form['name']
-        my_data.email = request.form['email']
-        my_data.role = UserRole[request.form['role']]
-
-        db.session.commit()
-        flash("User updated successfully!")
-
+    except SQLAlchemyError as e:
+        db.session.rollback()
+        logger.error(f"Database transaction failed - /Insert: {e}")  # Log the error
         return redirect(url_for('index'))
 
 
+@app.route('/update', methods=['POST'])
+def update():
+    try:
+        if request.method == 'POST':
+            my_data = Data.query.get(request.form.get('id'))
+            if not my_data:
+                flash("User not found!")
+                return redirect(url_for('index'))
+
+            my_data.name = request.form['name']
+            my_data.email = request.form['email']
+            my_data.role = UserRole[request.form['role']]
+
+            db.session.commit()
+            logger.info(f"Update successful: {my_data}")
+
+            flash("User updated successfully!")
+            return redirect(url_for('index'))
+
+    except SQLAlchemyError as e:
+        db.session.rollback()
+        logger.error(f"Database transaction failed - /Update: {e}")
+        return redirect(url_for('index'))
+
+
+@app.route('/delete/<id>', methods=['POST'])
+def delete(id):
+    try:
+        my_data = Data.query.get(id)
+        if not my_data:
+            flash("User not found!")
+            return redirect(url_for('index'))
+
+        db.session.delete(my_data)
+        db.session.commit()
+
+        logger.info("Deleted successfully")
+
+        flash("User deleted successfully!")
+        return redirect(url_for('index'))
+
+    except SQLAlchemyError as e:
+        db.session.rollback()
+        logger.error(f"Database transaction failed - /Delete: {e}")
+        return redirect(url_for('index'))
 
 
 if __name__ == '__main__':
