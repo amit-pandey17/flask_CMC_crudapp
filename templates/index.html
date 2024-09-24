@@ -137,6 +137,18 @@
             {% endfor %}
                     </table>
 
+                {# Pagination controls #}
+                <div class="pagination justify-content-center">
+                    {% if users.has_prev %}
+                        <a class="btn btn-primary" href="{{ url_for('main.index', page=users.prev_num) }}">Previous</a>
+                    {% endif %}
+
+                    <span class="btn btn-secondary disabled">Page {{ users.page }} of {{ users.pages }}</span>
+
+                    {% if users.has_next %}
+                        <a class="btn btn-primary" href="{{ url_for('main.index', page=users.next_num) }}">Next</a>
+                    {% endif %}
+                </div>
             </div> <!-- End of col-md-12 -->
         </div> <!-- End of row -->
     </div> <!-- End of container -->

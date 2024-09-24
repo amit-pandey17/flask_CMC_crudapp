@@ -5,20 +5,26 @@ from models import db, Data
 from sqlalchemy.exc import SQLAlchemyError
 from enums import UserRole
 import logging
+from config import Config
 
-logger = logging.getLogger(__name__)
-
+logger = Config.logger
 main = Blueprint('main', __name__)
 
 # Regex patterns for validation
 NAME_REGEX = r'^[A-Za-z0-9\s]+$'  # Allows alphabetic characters and spaces
 EMAIL_REGEX = r'^[\w\.-]+@[\w\.-]+\.\w+$'  # Basic email format validation
 
+
 @main.route('/')
 def index():
-    all_data = Data.query.all()
-    return render_template('index.html', users=all_data)
+    # Pagination parameters
+    page = request.args.get('page', 1, type=int)
+    per_page = 5  # Number of records per page
 
+    # Querying data with pagination
+    all_data = Data.query.paginate(page=page, per_page=per_page)
+
+    return render_template('index.html', users=all_data)
 @main.route('/insert', methods=['POST'])
 def insert():
     try:
@@ -29,19 +35,19 @@ def insert():
 
             # Validate name
             if not re.match(NAME_REGEX, name):
-                flash("Invalid name. Only alphabetic characters are allowed.")
+                flash("Error: Invalid name. Only alphabetic characters are allowed.")
                 return redirect(url_for('main.index'))
 
             # Validate email
             if not re.match(EMAIL_REGEX, email):
-                flash("Invalid email format.")
+                flash("Error:Invalid email format.")
                 return redirect(url_for('main.index'))
 
             # Check if role is a valid UserRole
             if role in UserRole.__members__:
                 role = UserRole[role]
             else:
-                flash("Invalid user role.")
+                flash("Error:Invalid user role.")
                 return redirect(url_for('main.index'))
 
             # Create a new Data object
@@ -81,12 +87,12 @@ def update():
 
             # Validate name
             if not re.match(NAME_REGEX, name):
-                flash("Invalid name. Only alphabetic characters are allowed.")
+                flash("Error:Invalid name. Only alphabetic characters are allowed.")
                 return redirect(url_for('main.index'))
 
             # Validate email
             if not re.match(EMAIL_REGEX, email):
-                flash("Invalid email format.")
+                flash("Error:Invalid email format.")
                 return redirect(url_for('main.index'))
 
             # Update user data
@@ -97,7 +103,7 @@ def update():
             if role in UserRole.__members__:
                 my_data.role = UserRole[role]
             else:
-                flash("Invalid user role.")
+                flash("Error:Invalid user role.")
                 return redirect(url_for('main.index'))
 
             db.session.commit()
@@ -108,6 +114,7 @@ def update():
 
     except SQLAlchemyError as e:
         db.session.rollback()
+
         logger.error(f"Database transaction failed - /update: {e}")
         flash("Failed to update user. Please try again.")
         return redirect(url_for('main.index'))

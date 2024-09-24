@@ -1,5 +1,6 @@
 # models.py
 from flask_sqlalchemy import SQLAlchemy
+from pymysql.constants.FLAG import AUTO_INCREMENT
 from sqlalchemy import Enum as SQLAEnum
 from enums import UserRole
 
